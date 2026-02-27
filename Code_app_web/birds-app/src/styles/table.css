@@ -1,0 +1,225 @@
+/* Table Styles */
+.table-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top: 4px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(135deg, #00D9B8 0%, #7C3AED 100%) 1;
+}
+
+.table-container h1 {
+  background: linear-gradient(135deg, #0D3B66 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #00D9B8 0%, #7C3AED 100%) 1;
+  padding-bottom: 1rem;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-section label {
+  color: #0D3B66;
+  font-weight: 700;
+  margin: 0;
+}
+
+.filter-section select,
+.filter-input {
+  padding: 0.75rem;
+  border: 2px solid #E8EDF5;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2D3748;
+  transition: var(--transition);
+  background-color: var(--white);
+  font-weight: 500;
+}
+
+.filter-section select:focus,
+.filter-input:focus {
+  outline: none;
+  border-color: #00D9B8;
+  box-shadow: 0 0 0 4px rgba(0, 217, 184, 0.15);
+  background-color: rgba(0, 217, 184, 0.02);
+}
+
+.filter-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.birds-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+}
+
+.birds-table thead {
+  background: linear-gradient(135deg, #0D3B66 0%, #2E5090 100%);
+  color: var(--white);
+}
+
+.birds-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  user-select: none;
+  border-bottom: 3px solid #00D9B8;
+  font-size: 0.95rem;
+}
+
+.birds-table th.sortable {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.birds-table th.sortable:hover {
+  background: linear-gradient(135deg, #2E5090 0%, #7C3AED 100%);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.birds-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #E8EDF5;
+  color: #2D3748;
+  font-weight: 500;
+}
+
+.birds-table tbody tr {
+  transition: var(--transition);
+}
+
+.birds-table tbody tr:hover {
+  background-color: rgba(0, 217, 184, 0.05);
+}
+
+.birds-table tbody tr:nth-child(even) {
+  background-color: rgba(248, 249, 251, 0.5);
+}
+
+/* Status Styling */
+.status {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.status.stable {
+  background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(0, 217, 184, 0.1) 100%);
+  color: #0D7C66;
+  border: 1px solid #00D9B8;
+}
+
+.status.increasing {
+  background: linear-gradient(135deg, rgba(46, 80, 144, 0.1) 0%, rgba(0, 217, 184, 0.1) 100%);
+  color: #0D3B66;
+  border: 1px solid #2E5090;
+}
+
+.status.decreasing {
+  background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+  color: #D63031;
+  border: 1px solid #E63946;
+}
+
+.status.unknown {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(200, 124, 237, 0.1) 100%);
+  color: #6B21A8;
+  border: 1px solid #7C3AED;
+}
+
+/* Table Info */
+.table-info {
+  text-align: center;
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .filter-section label {
+    width: 100%;
+  }
+
+  .filter-section select,
+  .filter-input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .birds-table th,
+  .birds-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .status {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .table-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .birds-table {
+    font-size: 0.85rem;
+  }
+
+  .birds-table th,
+  .birds-table td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .table-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .status {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,22 @@
+// Dans BirdsList.jsx
+import { useEffect, useState } from 'react';
+
+function BirdsList() {
+    const [birds, setBirds] = useState([]);
+
+    useEffect(() => {
+        // Appel à l'API Flask
+        fetch('http://localhost:5000/api/birds')
+            .then(response => response.json())
+            .then(data => setBirds(data))
+            .catch(error => console.error('Erreur:', error));
+    }, []);
+
+    return (
+        <div>
+            {birds.map(bird => (
+                <div key={bird.id}>{bird.nom_commun}</div>
+            ))}
+        </div>
+    );
+}

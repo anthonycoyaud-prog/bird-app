@@ -1,0 +1,266 @@
+/* Cards Styles */
+.birds-list-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+}
+
+.birds-list-container h1 {
+  background: linear-gradient(135deg, #0D3B66 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #00D9B8 0%, #7C3AED 100%) 1;
+  padding-bottom: 1rem;
+}
+
+.birds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bird-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-top: 3px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(135deg, #00D9B8 0%, #7C3AED 100%) 1;
+}
+
+.bird-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(13, 59, 102, 0.25);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00D9B8 0%, #17A2B8 100%);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.bird-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  color: #0D3B66;
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.card-info {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.card-info p {
+  margin-bottom: 0.5rem;
+  color: #2D3748;
+  font-size: 0.95rem;
+}
+
+.card-info strong {
+  color: #0D3B66;
+  font-weight: 700;
+}
+
+.card-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #00D9B8 0%, #17A2B8 100%);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  transition: var(--transition);
+  align-self: flex-start;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 217, 184, 0.3);
+}
+
+.card-link:hover {
+  background: linear-gradient(135deg, #00F5D1 0%, #2DD4BF 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 217, 184, 0.4);
+}
+
+/* Details Container */
+.details-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.details-content {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  border-top: 4px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(135deg, #00D9B8 0%, #7C3AED 100%) 1;
+}
+
+.details-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #00D9B8 0%, #17A2B8 100%);
+}
+
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-info h1 {
+  color: #0D3B66;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #00D9B8 0%, #7C3AED 100%) 1;
+  padding-bottom: 1rem;
+}
+
+.description {
+  color: #2D3748;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.info-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+.info-section h2 {
+  color: #0D3B66;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.info-section p {
+  margin-bottom: 0.5rem;
+  color: #2D3748;
+}
+
+.info-section strong {
+  color: #0D3B66;
+  font-weight: 700;
+}
+
+.info-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .birds-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .details-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .details-image {
+    height: 300px;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .birds-list-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .birds-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bird-card {
+    border-radius: 8px;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .details-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .details-content {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .details-image {
+    height: 200px;
+  }
+
+  .details-info h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+/* App Container Styles */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}
+
