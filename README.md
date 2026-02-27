@@ -84,10 +84,8 @@ Le frontend se trouve dans le dossier `birds-app`.
 
 Ouvrez un terminal dans le dossier `birds-app` et installez les dépendances :
 
-```bash
-npm install
+pnpm install
 
-```
 
 ### 2. Configuration des Images Locales
 
@@ -96,14 +94,10 @@ Dans la base de données, les chemins doivent ressembler à : `public\image\nom_
 
 ### 3. Lancer l'application web
 
-```bash
-npm start
 
-```
+pnpm dev
 
-L'application sera disponible sur `http://localhost:3000`.
 
----
 
 ## 📂 Structure du projet
 
