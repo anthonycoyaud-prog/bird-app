@@ -85,7 +85,7 @@ CREATE TABLE image (
 );
 
 -- =============================================
--- 4. Insertion des données (basé sur le script Python)
+-- 4. Insertion des données
 -- =============================================
 
 -- Insertion taxonomie
@@ -147,3 +147,60 @@ INSERT INTO image (id_image, url_image, date_upload, id_oiseau) VALUES
 (2, 'public\image\Petit Pingouin.jpeg', GETDATE(), 2),
 (3, 'public\image\Corbeau commun.jpeg', GETDATE(), 3),
 (4, 'public\image\Hibou Grand-duc.jpeg', GETDATE(), 4);
+
+
+-- =============================================
+-- 5. Création de la vue prinicpal
+-- =============================================
+
+
+CREATE VIEW [dbo].[All_info]
+AS
+SELECT 
+    o.id_oiseau, 
+    o.nom_commun, 
+    o.description, 
+    t.ordre, 
+    t.famille, 
+    t.genre, 
+    c.taille_cm, 
+    c.poids_min_g, 
+    c.poids_max_g, 
+    c.longevite_ans, 
+    p.population_estimee, 
+    p.zone_geographique, 
+    pa.nom_pays, 
+    a.nom, 
+    a.prenom, 
+    a.email, 
+    i.url_image, 
+    i.date_upload
+FROM 
+    dbo.oiseau AS o 
+    LEFT OUTER JOIN dbo.taxonomie AS t ON o.id_taxonomie = t.id_taxonomie 
+    LEFT OUTER JOIN dbo.caracteristique_physique AS c ON o.id_caracteristique = c.id_caracteristique 
+    LEFT OUTER JOIN dbo.population_repartition AS p ON o.id_population = p.id_population 
+    LEFT OUTER JOIN dbo.oiseau_pays AS op ON o.id_oiseau = op.id_oiseau 
+    LEFT OUTER JOIN dbo.pays AS pa ON op.id_pays = pa.id_pays 
+    LEFT OUTER JOIN dbo.auteur_oiseau AS ao ON o.id_oiseau = ao.id_oiseau 
+    LEFT OUTER JOIN dbo.auteur AS a ON ao.id_auteur = a.id_auteur 
+    LEFT OUTER JOIN dbo.image AS i ON o.id_oiseau = i.id_oiseau
+GROUP BY 
+    o.id_oiseau, 
+    o.nom_commun, 
+    o.description, 
+    t.ordre, 
+    t.famille, 
+    t.genre, 
+    c.taille_cm, 
+    c.poids_min_g, 
+    c.poids_max_g, 
+    c.longevite_ans, 
+    p.population_estimee, 
+    p.zone_geographique, 
+    pa.nom_pays, 
+    a.nom, 
+    a.prenom, 
+    a.email, 
+    i.url_image, 
+    i.date_upload;
