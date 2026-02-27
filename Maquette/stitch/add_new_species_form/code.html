@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add New Species - Bird-App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102213",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-20 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined fill-1">flutter_dash</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">Bird-App</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Encyclopedia</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Research</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Map</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden sm:flex items-stretch rounded-xl bg-slate-100 dark:bg-slate-800 h-10 w-64 overflow-hidden border border-transparent focus-within:border-primary/50 transition-all">
+<div class="flex items-center justify-center pl-3 text-slate-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400" placeholder="Search species..." type="text"/>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/20 overflow-hidden border-2 border-primary/30">
+<img class="h-full w-full object-cover" data-alt="User profile avatar of a researcher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDswJJ3u0NDruLRtgAUwr6DnOuicmHE-AjVhQipT9p_8URliw55Q27-lbZ7-YOblO9C1zFnV4zsnWLuOEhxcNAXG0P7qE_kl-w8r4ybNdJeg5cyaI1wmDq3Ey9SoChW01hTOmpropPbhKGikcHWOIw51WGt4y8Fh7LLPIOBVTlNdoC0CnFT6rDIJuCaw-V13eBAcREI9Y6yJpFQKE3_UGkXXjUdAEdMXzrEjxKkJmlyZ6AjSOs8gntavjK7fUj6eZit7MPOhfjyqDo"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-6 md:px-20">
+<div class="max-w-[800px] w-full flex flex-col gap-8">
+<!-- Header -->
+<div class="flex flex-col gap-2">
+<nav class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+<a class="hover:text-primary" href="#">Encyclopedia</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Add New Species</span>
+</nav>
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Add New Species</h1>
+<p class="text-slate-500 dark:text-slate-400">Expand the global ornithological database with verified research data.</p>
+</div>
+<form class="flex flex-col gap-10">
+<!-- Taxonomy Section -->
+<section class="flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+<span class="material-symbols-outlined text-primary">account_tree</span>
+<h2 class="text-xl font-bold">Taxonomy</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Common Name</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="e.g. Peregrine Falcon" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Scientific Name</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12 italic" placeholder="e.g. Falco peregrinus" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Order</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="e.g. Falconiformes" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Family</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="e.g. Falconidae" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Genus</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="e.g. Falco" type="text"/>
+</div>
+</div>
+</section>
+<!-- Characteristics Section -->
+<section class="flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+<span class="material-symbols-outlined text-primary">straighten</span>
+<h2 class="text-xl font-bold">Characteristics</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Size (cm)</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="Average length" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Longevity (Years)</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="Expected lifespan" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Weight Min (g)</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="0" type="number"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Weight Max (g)</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="0" type="number"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Description</label>
+<textarea class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary p-4" placeholder="Detailed morphological and behavioral characteristics..." rows="4"></textarea>
+</div>
+</div>
+</section>
+<!-- Geography Section -->
+<section class="flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
+<span class="material-symbols-outlined text-primary">public</span>
+<h2 class="text-xl font-bold">Geography &amp; Population</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Estimated Global Population</label>
+<input class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="e.g. 100,000 - 500,000" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Conservation Status</label>
+<select class="rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12">
+<option>Least Concern</option>
+<option>Near Threatened</option>
+<option>Vulnerable</option>
+<option>Endangered</option>
+<option>Critically Endangered</option>
+<option>Extinct in the Wild</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Geographic Zone / Country Range</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">map</span>
+<input class="w-full pl-12 rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:border-primary focus:ring-primary h-12" placeholder="Enter regions separated by commas" type="text"/>
+</div>
+</div>
+<div class="md:col-span-2 h-48 rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden relative border border-slate-200 dark:border-slate-700">
+<img class="w-full h-full object-cover opacity-50 grayscale" data-alt="World map showing bird migration routes" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKt3KNb6wJ6GM8D7vx8LJ0y_bV9hluOcsP4Y9nFYuc5iD4r_oYbT_mJFIppfphUSmDdMVYWeqL0V5Dm8ks2EBkXvq3VvmOP3DX0dg8YLKuFIC2VAvYqkShroAJADyoWJoasWAQZZtXq_TvuBGj9uYocfk0MNMBSsHv2hVeqcec3WzNlNeewIse1erTHsDO_K_BcCmv0PfYk4ISQ8UnnuizP3KUlmWLnP67xDFKB7mljxlypS7YbaGMOclG2GuNIqj64Iqy80WpN5w"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 py-2 rounded-lg text-sm font-bold shadow-sm flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-sm">add_location</span>
+                                            Mark range on map
+                                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-4 pb-10">
+<button class="w-full sm:w-auto px-8 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" type="button">
+                                Cancel
+                            </button>
+<button class="w-full sm:w-auto px-10 py-3 rounded-xl bg-primary text-slate-900 font-bold hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20" type="submit">
+<span class="material-symbols-outlined">save</span>
+                                Save Species
+                            </button>
+</div>
+</form>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-8 px-6 md:px-20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500">© 2024 Bird-App Research Portal. All rights reserved.</p>
+<div class="flex gap-6 text-sm text-slate-500">
+<a class="hover:text-primary" href="#">Guidelines</a>
+<a class="hover:text-primary" href="#">Verification Protocol</a>
+<a class="hover:text-primary" href="#">Support</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
