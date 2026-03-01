@@ -1,5 +1,7 @@
 # Birds Project - API & App Web
 
+Avant toute chose, le projet se distingue entre la partie rapport et la partie code_app_web
+
 Cette application permet de gérer une base de données d'espèces d'oiseaux, d'ajouter des caractéristiques, des photos, et d'afficher des informations détaillées.
 
 ## 🛠️ Architecture
@@ -86,7 +88,6 @@ Ouvrez un terminal dans le dossier `birds-app` et installez les dépendances :
 
 pnpm install
 
-
 ### 2. Configuration des Images Locales
 
 Pour afficher les images, placez vos fichiers `.jpg` ou `.jpeg` dans le dossier `public/image/`.
@@ -94,10 +95,7 @@ Dans la base de données, les chemins doivent ressembler à : `public\image\nom_
 
 ### 3. Lancer l'application web
 
-
 pnpm dev
-
-
 
 ## 📂 Structure du projet
 
