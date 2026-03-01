@@ -4,7 +4,7 @@ Avant toute chose, le projet se distingue entre la partie rapport et la partie c
 
 Cette application permet de gérer une base de données d'espèces d'oiseaux, d'ajouter des caractéristiques, des photos, et d'afficher des informations détaillées.
 
-## 🛠️ Architecture
+## Architecture
 
 - **Backend**: Python Flask avec `pyodbc` pour la connexion SQL Server.
 - **Frontend**: React.js.
@@ -12,7 +12,7 @@ Cette application permet de gérer une base de données d'espèces d'oiseaux, d'
 
 ---
 
-## 🚀 Prérequis
+## Prérequis
 
 - Python 3.x installé.
 - Node.js et npm installés.
@@ -20,7 +20,7 @@ Cette application permet de gérer une base de données d'espèces d'oiseaux, d'
 
 ---
 
-## 🐍 Partie Backend (API Flask)
+## Partie Backend (API Flask)
 
 Le backend se trouve dans le dossier `birds_api`.
 
@@ -78,7 +78,7 @@ L'API sera disponible sur `http://localhost:5000`.
 
 ---
 
-## ⚛️ Partie Frontend (App React)
+## Partie Frontend (App React)
 
 Le frontend se trouve dans le dossier `birds-app`.
 
