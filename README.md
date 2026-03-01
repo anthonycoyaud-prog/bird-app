@@ -26,7 +26,7 @@ Le backend se trouve dans le dossier `birds_api`.
 
 ### 0. Base de données
 
-Ouvrir le script de création des tables et copier dans un sgbd (J'ai utilisé sql serveur)
+Ouvrir le script de création des tables et copier dans un sgbd (J'ai utilisé sql serveur) qui se trouve dans rapport -> Database
 
 ### 1. Installation
 

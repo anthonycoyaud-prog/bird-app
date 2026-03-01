@@ -13,6 +13,8 @@ birds-app/.env
 # Environnement
 .DS_Store
 .vscode/
+~$apport.docx
+~WRL1243.tmp
 
  
 # Flask / SQLite
